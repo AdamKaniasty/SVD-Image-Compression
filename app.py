@@ -80,7 +80,7 @@ def processIMG(img, name, k, gray=True):
     svd = performSVD(img, gray, k)
     num = svd[3]
     reconstruction = reconstructSVD(svd[0], svd[1], svd[2], gray)
-    plt.figure(figsize=(9, 6))
+    plt.figure(figsize=(15, 6))
     saved = spaceSavings(img, num, gray)
     plt.subplot(121)
     if gray:
@@ -108,4 +108,11 @@ def testPerformanceGray():
             processIMG(img, gray_images_names[index], k)
 
 
-processIMG(color_images[0], color_images_names[0], 0.05, False)
+def testPerformanceColor():
+    k_params = [0.01, 0.05, 0.1, 0.2, 0.5]
+    for (index, img) in tqdm(enumerate(color_images)):
+        for k in tqdm(k_params):
+            processIMG(img, color_images_names[index], k, False)
+
+testPerformanceGray()
+testPerformanceColor()
