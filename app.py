@@ -114,5 +114,7 @@ def testPerformanceColor():
         for k in tqdm(k_params):
             processIMG(img, color_images_names[index], k, False)
 
+
+
 testPerformanceGray()
-testPerformanceColor()
+# testPerformanceColor()
