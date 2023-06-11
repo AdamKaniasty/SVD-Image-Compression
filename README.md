@@ -17,4 +17,4 @@ We also measured how much space was saved by performing the compression (see sav
 SVD compression performs the best on bigger images when k parameter is set to values < 0.2. Also, when performed on RGB images, sometimes a visible noise appears even for larger values of k.
 
 ### Example:
-[](https://github.com/AdamKaniasty/SVD-Image-Compression/blob/main/images/gray/figs/geralt_0.1.jpg)
+![](https://github.com/AdamKaniasty/SVD-Image-Compression/blob/main/images/gray/figs/geralt_0.1.jpg)
